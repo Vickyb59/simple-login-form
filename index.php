@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	include('inc/config.php');
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,8 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <head>
         <meta charset="UTF-8" />
-        <title>Alibaba Manufacturer Directory - Suppliers, Manufacturers, Exporters &amp; Importers</title>
+        <title><?php echo $siteTitle; ?></title>
+        <link rel="shortcut icon" href="<?php echo $favicon; ?>" type="image/x-icon">
         <meta name="title" content="" />
         <meta name="robots" content="" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
