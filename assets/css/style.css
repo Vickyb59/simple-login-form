@@ -4,7 +4,7 @@
 	font-family: arial;
 	color: #4d4d4d;
 }
-
+textarea, input, select { outline: none; }
 a {
     text-decoration: none;
     color: #08C!important;
@@ -13,11 +13,9 @@ a {
 a:visited {
     color: #306;
 }
-
 img{
 	width: 50px;
 }
-
 header {
     display: flex;
     gap: 20px;
@@ -30,30 +28,30 @@ header {
     width: 190px;
 }
 .section-wrapper{
-    position: absolute;
+/*    position: absolute;*/
     width: 100%;
     height: 600px;
-    top: 101px;
-    left: 0px;
+    /*top: 101px;
+    left: 0px;*/
     background: url(../images/background-web.png) center center no-repeat rgb(245, 245, 245);
 }
 .login-container{
     position: relative;
-    min-height: 600px;
+/*    min-height: 600px;*/
     zoom: 1;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 40px 80px;
 }
 .promo{
 	float: left;
     width: 60%;
-    height: 600px;
+/*    height: 600px;*/
 }
 .login-form-wrapper{
 	display: grid;
     row-gap: 20px;
 /*	float: left;*/
-    margin: 40px 0 0;
+/*    margin: 40px 0 0;*/
     padding: 32px 20px;
     border: solid 1px #ddd;
     box-shadow: 0 0 10px #ddd;
@@ -88,7 +86,7 @@ header {
 .form-group label, .checkbox-part {
     font-weight: 700;
 }
-.form-group input{
+.form-group input, .form-group select{
 /*	width: 100%;*/
 	float: left;
     padding: 4px 6px;    
@@ -103,20 +101,31 @@ header {
     -o-box-shadow: 0 1px 0 #ececec inset;
     box-shadow: 0 1px 0 #ececec inset;
 }
-.form-group input:hover{
+.form-group input:hover, .form-group select:hover{
 	border: 1px solid #a6a6a6;
 }
-.form-group input::selection {
+.form-group input::selection, .form-group select::selection{
     background: #1996e6;
     color: #fff;
 }
-.form-group input:focus {
+.form-group input:focus, .form-group select:focus{
     border-color: #70a5e0;
     -webkit-box-shadow: 0 0 2px #a6cfff;
     -moz-box-shadow: 0 0 2px #a6cfff;
     -ms-box-shadow: 0 0 2px #a6cfff;
     -o-box-shadow: 0 0 2px #a6cfff;
     box-shadow: 0 0 2px #a6cfff;
+}
+.number-group {
+    display: flex;
+}
+.number-group select, .number-group select:hover, .number-group select:focus{
+	width: 30%;
+	border-right: none;
+}
+.number-group input, .number-group input:hover, .number-group input:focus{
+	width: 70%;
+	border-left: none;
 }
 .checkbox-part {
     display: flex;
@@ -147,4 +156,65 @@ header {
 }
 .social-sign-in img{
 	width: 35px;
+}
+footer{
+	display: grid;
+    row-gap: 10px;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 30px 80px;
+    font-size: 12px;
+}
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+footer p{
+	color: #999;
+}
+footer p img{
+	width: 26px;
+}
+
+@media screen and (min-width: 520px) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 499px) {
+	.desktop {
+		display: none;
+	}
+	.mobile-header {
+		display: flex;
+		color: #333;
+		font-weight: 500;
+		font-size: 20px;
+		justify-content: space-between;
+		align-items: center;
+		height: 52px;
+		padding: 10px 30px;
+	}
+	.mobile-header .bug-report{
+		width: 25px;
+	}
+	.mobile-section-wrapper{
+		padding: 10px 30px;
+	}
+	.mobile-login-container{
+		display: grid;
+	    row-gap: 20px;
+	}
+	.mobile-login-container form{
+	    display: grid;
+	    gap: 15px;
+	    margin: auto;
+	    position: relative;
+	    z-index: 1;
+	    font: 400 12px arial;
+	    width: 100%;
+	}
 }

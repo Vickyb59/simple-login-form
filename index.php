@@ -7,10 +7,8 @@
         <?php
             include("inc/header.php");
             include("inc/main.php");
+            include("inc/footer.php");
         ?>
-
-        <footer>
-            
-        </footer>
+        <script type="text/javascript" src="assets/js/main.js"></script>
     </body>
 </html>
