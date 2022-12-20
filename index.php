@@ -1,6 +1,7 @@
 <?php
 	include("inc/config.php");
     include("inc/head.php");
+    
 ?>
     <body>
 
