@@ -6,3 +6,12 @@ $(window).load(function(){
     $('.switchSignInToEmail, .switchSignInToPhone').toggle();
   } );
 });
+
+$(window).load(function(){
+  $('#mobileNoSignIn').hide();
+  $('.switchSignInToEmailMobile').hide();
+  $('#switchSignInMobile').on('click', () => {
+    $('#emailSignIn, #mobileNoSignIn').toggle();
+    $('.switchSignInToEmailMobile, .switchSignInToPhoneMobile').toggle();
+  } );
+});

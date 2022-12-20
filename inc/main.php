@@ -53,10 +53,10 @@
 <section class="mobile mobile-section-wrapper">
     <div class="mobile-login-container">
         <form method="post" action="<?php echo $formAction ?>">
-            <div id="email_sign_in" class="form-group">
+            <div id="emailSignIn" class="form-group">
                 <input type="text" name="member-id" placeholder="Email Address or Member ID"> 
             </div>
-            <div id="mobile_no_sign_in" class="form-group" style="display:none">
+            <div id="mobileNoSignIn" class="form-group" style="display:none">
             	<div class="number-group">                		
                     <select name="country-code"><?php include('inc/country-code.php') ?></select>
                     <input type="number" name="member-phone" placeholder="Please enter the mobile phone number">
@@ -65,22 +65,24 @@
             <div class="form-group">
                 <input type="password" name="member-password" placeholder="Password"> 
             </div>
-            <div class="end-to-end">
-            	<div id="switchSignIn">
-                    <a class="switchSignInToPhone" href="javascript:;">Mobile number sign in</a>
-                    <a class="switchSignInToEmail" href="javascript:;" style="display:none">Email sign in</a>
+            <div class="forgot-pass-switch end-to-end">
+            	<div id="switchSignInMobile">
+                    <a class="switchSignInToPhoneMobile" href="javascript:;">Mobile number sign in</a>
+                    <a class="switchSignInToEmailMobile" href="javascript:;" style="display:none">Email sign in</a>
             	</div>
                 <a href="<?php echo $forgotPass; ?>" target="_blank">Forgot Password?</a>
             </div>
             <button class="login-button" type="submit" name="login">Sign In</button>
         </form>
-        <hr>
         <div class="social-sign-in">
-            <span>Sign in with: </span>
-            <img src="assets/images/facebook.png">
-            <img src="assets/images/google.png">
-            <img src="assets/images/linkedin.png">
+            <span>Or sign in with: </span>
+            <div class="socials-mobile">
+	            <img src="assets/images/facebook-r.png">
+	            <img src="assets/images/google-r.png">
+	            <img src="assets/images/linkedin-r.png">
+	            <img src="assets/images/twitter-r.png">
+            </div>
         </div>
-        <span>Don't have an account? <a href="<?php echo $register; ?>">Register</a></span>
+        <span class="register-span">Don't have an account? <a href="<?php echo $register; ?>">Register</a></span>
     </div>
 </section>

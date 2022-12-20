@@ -101,20 +101,9 @@ header {
     -o-box-shadow: 0 1px 0 #ececec inset;
     box-shadow: 0 1px 0 #ececec inset;
 }
-.form-group input:hover, .form-group select:hover{
-	border: 1px solid #a6a6a6;
-}
 .form-group input::selection, .form-group select::selection{
     background: #1996e6;
     color: #fff;
-}
-.form-group input:focus, .form-group select:focus{
-    border-color: #70a5e0;
-    -webkit-box-shadow: 0 0 2px #a6cfff;
-    -moz-box-shadow: 0 0 2px #a6cfff;
-    -ms-box-shadow: 0 0 2px #a6cfff;
-    -o-box-shadow: 0 0 2px #a6cfff;
-    box-shadow: 0 0 2px #a6cfff;
 }
 .number-group {
     display: flex;
@@ -178,12 +167,30 @@ footer p img{
 	width: 26px;
 }
 
+/********************************
+ *********DESKTOP STYLES*********
+********************************/
+
 @media screen and (min-width: 520px) {
-  .mobile {
-    display: none;
-  }
+	.mobile {
+		display: none;
+	}
+	.form-group input:hover, .form-group select:hover{
+		border: 1px solid #a6a6a6;
+	}
+	.form-group input:focus, .form-group select:focus{
+	    border-color: #70a5e0;
+	    -webkit-box-shadow: 0 0 2px #a6cfff;
+	    -moz-box-shadow: 0 0 2px #a6cfff;
+	    -ms-box-shadow: 0 0 2px #a6cfff;
+	    -o-box-shadow: 0 0 2px #a6cfff;
+	    box-shadow: 0 0 2px #a6cfff;
+	}
 }
 
+/********************************
+ *********MOBILE STYLES*********
+********************************/
 @media screen and (max-width: 499px) {
 	.desktop {
 		display: none;
@@ -196,7 +203,7 @@ footer p img{
 		justify-content: space-between;
 		align-items: center;
 		height: 52px;
-		padding: 10px 30px;
+		padding: 10px 30px 20px;
 	}
 	.mobile-header .bug-report{
 		width: 25px;
@@ -216,5 +223,70 @@ footer p img{
 	    z-index: 1;
 	    font: 400 12px arial;
 	    width: 100%;
+	}
+	.mobile-login-container input, .mobile-login-container select{
+		border: none;
+	    padding: 0;
+	    height: 45px;
+	    font-size: 16px;
+	    outline: none;
+	    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+	}
+	.mobile-login-container input, .mobile-login-container select{
+		border-bottom: 1px solid #ccc;
+	}
+	.mobile-login-container select:hover, .mobile-login-container select:focus,
+	.mobile-login-container input:hover, .mobile-login-container input:focus
+	{
+		border-bottom: 1px solid #ff7519;
+	}
+	.forgot-pass-switch a {
+	    color: #999999!important;
+	}
+	.login-button{
+		margin: 15px 0px;
+		border: none;
+	    box-shadow: 0 1px 2px #ff6a00;
+	    background: linear-gradient(to bottom right,#fe8e43,#ff6a00);
+	    border-radius: 3px;
+	    font-size: 20px;
+	    font-weight: 500;
+	    height: 42px;
+	    line-height: 42px;
+	    outline: none;
+	    color: #fff;
+	    width: 100%;
+	    cursor: pointer;
+	}
+	.social-sign-in {
+	    display: grid;
+	    gap: 20px;
+	    align-items: center;
+	    justify-items: center;
+	}
+	.social-sign-in span {
+	    font-size: 12px;
+	    color: #999;
+	}
+	.socials-mobile{
+		display: flex;
+	    gap: 25px;
+	    justify-content: space-evenly;
+	    align-items: center;
+	}
+	.socials-mobile img{
+		width: 48px;
+	}
+	.register-span {
+		display: flex;
+		justify-content: center;
+	    align-items: center;
+	    gap: 5px;
+	    padding: 20px 0 0 0;
+	    color: #999;
+    	font-size: 14px;
+	}
+	.register-span a{
+	    color: #ff7519!important;
 	}
 }
