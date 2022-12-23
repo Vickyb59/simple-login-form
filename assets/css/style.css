@@ -86,6 +86,7 @@ header {
 .form-group label, .checkbox-part {
     font-weight: 700;
 }
+
 .form-group input, .form-group select{
 /*	width: 100%;*/
 	float: left;
